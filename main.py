@@ -1,2 +1,3 @@
-print("Hellow Worl!")
-print("change summi")
+import random
+x=random.random()
+print(x)
