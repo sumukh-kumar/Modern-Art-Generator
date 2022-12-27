@@ -1,10 +1,12 @@
 from tkinter import * 
 from PIL import ImageTk,Image
 import images
+import generator,options
 
 root = Tk()
 root.title("Modern Art Generator")
 root.geometry("1920x1080")
+
 
 
 
@@ -19,7 +21,7 @@ my_canvas.create_image(0,0,image=bg,anchor="nw")
 my_canvas.create_text(400,250,text="Modern Art Generator",font=("",20),fill="White")
 
 
-button1= Button(root,text="Start")
+button1= Button(root,text="Start",command=generator.count)
 button2= Button(root,text="Options")
 button3= Button(root,text="Exit")
 
