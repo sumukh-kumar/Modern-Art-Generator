@@ -3,6 +3,8 @@ from PIL import ImageTk,Image
 import images
 import generator,options
 
+
+
 root = Tk()
 root.title("Modern Art Generator")
 root.geometry("1920x1080")
@@ -10,18 +12,23 @@ root.geometry("1920x1080")
 
 
 
-bg= PhotoImage(file="images\Temp_BG.png")
+bg= Image.open("images\Temp_BG.png")
+bg_refined = ImageTk.PhotoImage(bg)
+button1_image= Image.open("images\Temp_Button.png").resize((100,50))
+button1_U_image= ImageTk.PhotoImage(button1_image)
+
+
 
 
 my_canvas = Canvas(root)
 my_canvas.pack(fill="both",expand=True)
 
-my_canvas.create_image(0,0,image=bg,anchor="nw")
+my_canvas.create_image(0,0,image=bg_refined,anchor="nw")
 
 my_canvas.create_text(400,250,text="Modern Art Generator",font=("",28),fill="White")
 
 
-button1= Button(root,text="Start",command=generator.count)
+button1= Button(root,text="Start",image=button1_U_image,command=generator.generator_1)
 button2= Button(root,text="Options")
 button3= Button(root,text="Exit")
 
@@ -54,4 +61,4 @@ button2.grid(row=2,column=0,padx=20,pady=50)
 button3.grid(row=3,column=0,padx=20,pady=50) """
 
 
-root.mainloop()
+mainloop()
