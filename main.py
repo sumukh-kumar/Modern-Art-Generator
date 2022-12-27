@@ -18,7 +18,7 @@ my_canvas.pack(fill="both",expand=True)
 
 my_canvas.create_image(0,0,image=bg,anchor="nw")
 
-my_canvas.create_text(400,250,text="Modern Art Generator",font=("",20),fill="White")
+my_canvas.create_text(400,250,text="Modern Art Generator",font=("",28),fill="White")
 
 
 button1= Button(root,text="Start",command=generator.count)
@@ -26,9 +26,9 @@ button2= Button(root,text="Options")
 button3= Button(root,text="Exit")
 
 
-button1_window = my_canvas.create_window(50,500,anchor="nw",window=button1)
-button2_window = my_canvas.create_window(50,650,anchor="nw",window=button2)
-button3_window = my_canvas.create_window(50,800,anchor="nw",window=button3)
+button1_window = my_canvas.create_window(50,400,anchor="nw",window=button1)
+button2_window = my_canvas.create_window(50,550,anchor="nw",window=button2)
+button3_window = my_canvas.create_window(50,700,anchor="nw",window=button3)
 
 
 
