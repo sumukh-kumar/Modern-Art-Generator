@@ -1,7 +1,7 @@
 from tkinter import * 
 from PIL import ImageTk,Image
 import images
-import generator,options
+import generator,options,common_functions
 
 
 
@@ -11,54 +11,30 @@ root.geometry("1920x1080")
 
 
 
+Background_Image = common_functions.make_img("images\Temp_BG.png",)
 
-bg= Image.open("images\Temp_BG.png")
-bg_refined = ImageTk.PhotoImage(bg)
-button1_image= Image.open("images\Temp_Button.png").resize((100,50))
-button1_U_image= ImageTk.PhotoImage(button1_image)
+Gen_button_image = common_functions.make_img("images\Temp_Button.png",(100,50))
 
 
 
+root_canvas = Canvas(root)
+root_canvas.pack(fill="both",expand=True)
 
-my_canvas = Canvas(root)
-my_canvas.pack(fill="both",expand=True)
+root_canvas.create_image(0,0,image=Background_Image,anchor="nw")
 
-my_canvas.create_image(0,0,image=bg_refined,anchor="nw")
-
-my_canvas.create_text(400,250,text="Modern Art Generator",font=("",28),fill="White")
-
-
-button1= Button(root,text="Start",image=button1_U_image,command=generator.generator_1)
-button2= Button(root,text="Options")
-button3= Button(root,text="Exit")
+root_canvas.create_text(400,250,text="Modern Art Generator",font=("",28),fill="White")
 
 
-button1_window = my_canvas.create_window(50,400,anchor="nw",window=button1)
-button2_window = my_canvas.create_window(50,550,anchor="nw",window=button2)
-button3_window = my_canvas.create_window(50,700,anchor="nw",window=button3)
+Gen_button = Button(root,text="Start",image=Gen_button_image,command=generator.generator_1)
+Options_button = Button(root,text="Options")
+Exit_button = Button(root,text="Exit",command=root.destroy)
 
 
+Gen_button_window = root_canvas.create_window(50,400,anchor="nw",window=Gen_button)
+Options_button_window = root_canvas.create_window(50,550,anchor="nw",window=Options_button)
+Exit_button_window = root_canvas.create_window(50,700,anchor="nw",window=Exit_button)
 
 
-
-
-
-
-
-
-""" 
-my_label = Label(root,image=bg)
-my_label.place(x=0,y=0,relwidth=1,relheight=1)
-
-fake_text = Label(root,text="")
-button1= Button(root,text="Generate Art")
-button2= Button(root,text="Options")
-button3= Button(root,text="Exit")
-
-fake_text.grid(row=0,column=0,padx=20,pady=100)
-button1.grid(row=1,column=0,padx=20,pady=50)
-button2.grid(row=2,column=0,padx=20,pady=50)
-button3.grid(row=3,column=0,padx=20,pady=50) """
 
 
 mainloop()
