@@ -1,7 +1,9 @@
 from tkinter import * 
 from PIL import ImageTk,Image
 import images
-import generator,options,common_functions
+import generator,options,functions_constants
+
+
 
 
 
@@ -10,10 +12,9 @@ root.title("Modern Art Generator")
 root.geometry("1920x1080")
 
 
+Background_Image = functions_constants.make_img(functions_constants.bg_image)
 
-Background_Image = common_functions.make_img("images\Temp_BG.png",)
-
-Gen_button_image = common_functions.make_img("images\Temp_Button.png",(100,50))
+Gen_button_image = functions_constants.make_img(functions_constants.button_temp_image,(100,50))
 
 
 
