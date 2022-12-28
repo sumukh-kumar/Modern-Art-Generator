@@ -1,15 +1,8 @@
 from tkinter import * 
 from PIL import ImageTk,Image
 import images
-import options,functions_constants
+import options,functions_constants,noise_functions
 
-
-def pconfirm_clicked():
-    color_chosen=clicked.get()
-    if color_chosen=="Choose Desired Color":
-        pgen_canvas.create_text(400,250,text="Please Choose a color",font=("",28),fill="White")
-    else:
-        pass
 
 
 
@@ -21,7 +14,7 @@ def pnoise_clicked():
         if color_chosen=="Choose Desired Color":
             pgen_canvas.create_text(400,600,text="Please Choose a color",font=("",28),fill="White")
         else:
-            pass
+            noise_functions.pnoise(color_chosen)
 
     pgen = Toplevel()
     pgen.title("Generator")
@@ -43,7 +36,6 @@ def pnoise_clicked():
     pn_confirm_window = pgen_canvas.create_window(50,800,anchor="nw",window=pn_confirm_button)
 
 
-    #global clicked
     clicked= StringVar()
     clicked.set("Choose Desired Color")
 
