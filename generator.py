@@ -29,11 +29,11 @@ def pnoise_clicked():
 
     pgen_canvas.create_text(400,250,text="Choose Desired Color",font=("",28),fill="White")
 
-    pn_confirm_img = functions_constants.make_img(functions_constants.button_temp_image,(200,200))
+    pn_confirm_img = functions_constants.make_img(functions_constants.button_temp_image,(100,100))
 
     pn_confirm_button = Button(pgen,image=pn_confirm_img,command=pconfirm_clicked)
 
-    pn_confirm_window = pgen_canvas.create_window(50,800,anchor="nw",window=pn_confirm_button)
+    pn_confirm_window = pgen_canvas.create_window(50,650,anchor="nw",window=pn_confirm_button)
 
 
     clicked= StringVar()
