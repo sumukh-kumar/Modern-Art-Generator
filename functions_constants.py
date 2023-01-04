@@ -5,7 +5,7 @@ import generator,options
 
 
 
-bg_image = "images\Temp_BG.png"
+bg_image = "images\BG.png"
 button_temp_image = "images\Temp_Button.png"
 pnoise_image = "images\Pnoise.PNG"
 

@@ -1,18 +1,18 @@
 from tkinter import * 
 from PIL import ImageTk,Image
 import images
-import generator,options,functions_constants
+import generator,options,functions_constants,rectangle_code
 
 
 
 
 
-root = Tk()
+root = Toplevel()
 root.title("Modern Art Generator")
 root.geometry("1920x1080")
 
 
-Background_Image = functions_constants.make_img(functions_constants.bg_image)
+Background_Image = functions_constants.make_img(functions_constants.bg_image,(1920,1080))
 
 Gen_button_image = functions_constants.make_img(functions_constants.button_temp_image,(100,50))
 

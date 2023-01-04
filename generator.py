@@ -1,7 +1,7 @@
 from tkinter import * 
 from PIL import ImageTk,Image
 import images
-import options,functions_constants,noise_functions
+import options,functions_constants,noise_functions,rectangle_code
 
 
 
@@ -20,7 +20,7 @@ def pnoise_clicked():
     pgen.title("Generator")
     pgen.geometry("1920x1080")
 
-    pgen_background = functions_constants.make_img(functions_constants.bg_image)
+    pgen_background = functions_constants.make_img(functions_constants.bg_image,(1920,1080))
 
     pgen_canvas = Canvas(pgen)
     pgen_canvas.pack(fill="both",expand=True)
@@ -55,13 +55,16 @@ def pnoise_clicked():
     mainloop()
 
 
+def rec_clicked():
+    rectangle_code.generate()
+
 
 def generator_1():
     gen_1= Toplevel()
     gen_1.title("Generator")
     gen_1.geometry("1920x1080")
 
-    gen_background = functions_constants.make_img(functions_constants.bg_image)
+    gen_background = functions_constants.make_img(functions_constants.bg_image,(1920,1080))
 
     gen_canvas = Canvas(gen_1)
     gen_canvas.pack(fill="both",expand=True)
@@ -72,12 +75,15 @@ def generator_1():
 
 
     Pnoise_image = functions_constants.make_img(functions_constants.pnoise_image,(100,50))
+    Rec_image = functions_constants.make_img(functions_constants.button_temp_image,(100,100))
 
 
     Pnoise_button = Button(gen_1,image=Pnoise_image,command=pnoise_clicked)
+    Rec_button = Button(gen_1,image=Rec_image,command=rec_clicked)
 
 
     Pnoise_button_window = gen_canvas.create_window(50,400,anchor="nw",window=Pnoise_button)
+    Rec_button_window = gen_canvas.create_window(500,400,anchor="nw",window=Rec_button)
 
 
 
