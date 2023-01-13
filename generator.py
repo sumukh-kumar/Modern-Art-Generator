@@ -65,13 +65,14 @@ def generator_1():
     gen_1.geometry("1920x1080")
 
     gen_background = functions_constants.make_img(functions_constants.bg_image,(1920,1080))
+    gen_title = functions_constants.make_img(functions_constants.choose_art_title,(1000,500))
 
     gen_canvas = Canvas(gen_1)
     gen_canvas.pack(fill="both",expand=True)
 
     gen_canvas.create_image(0,0,image=gen_background,anchor="nw")
+    gen_canvas.create_image(450,100,image=gen_title,anchor="nw")
 
-    gen_canvas.create_text(400,250,text="Choose Your desired Moden Art Type:",font=("",28),fill="White")
 
 
     Pnoise_image = functions_constants.make_img(functions_constants.pnoise_image,(100,50))
