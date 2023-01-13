@@ -10,8 +10,8 @@ def random_color():
     
 def random_pos():
     penup()   
-    x=randint(-400,400)
-    y=randint(-300,300) 
+    x=randint(-600,600)
+    y=randint(-400,400) 
     goto(x ,y)
     pendown()
 
@@ -31,7 +31,7 @@ def circle():
     dot(size)
 
 def generate():
-    for shape in range(20):
+    for shape in range(60):
         random_color()
         random_pos()
         rectangle()
