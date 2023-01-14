@@ -76,8 +76,8 @@ def generator_1():
 
 
 
-    Pnoise_image = functions_constants.make_img(functions_constants.pnoise_image,(100,50))
-    Rec_image = functions_constants.make_img(functions_constants.button_temp_image,(100,100))
+    Pnoise_image = functions_constants.make_img(functions_constants.noise_image_image,(200,100))
+    Rec_image = functions_constants.make_img(functions_constants.shapes_image,(200,100))
 
 
     Pnoise_button = Button(gen_1,image=Pnoise_image,command=pnoise_clicked)
@@ -85,7 +85,7 @@ def generator_1():
 
 
     Pnoise_button_window = gen_canvas.create_window(50,400,anchor="nw",window=Pnoise_button)
-    Rec_button_window = gen_canvas.create_window(500,400,anchor="nw",window=Rec_button)
+    Rec_button_window = gen_canvas.create_window(50,575,anchor="nw",window=Rec_button)
 
 
 
