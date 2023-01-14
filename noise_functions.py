@@ -1,12 +1,13 @@
 import matplotlib.pyplot as plt
 from perlin_noise import PerlinNoise
+from random import *
 
 
 def pnoise(color):
-    noise1 = PerlinNoise(octaves=3)
-    noise2 = PerlinNoise(octaves=6)
-    noise3 = PerlinNoise(octaves=12)
-    noise4 = PerlinNoise(octaves=24)
+    noise1 = PerlinNoise(octaves=randint(1,10))
+    noise2 = PerlinNoise(octaves=randint(1,10))
+    noise3 = PerlinNoise(octaves=randint(1,10))
+    noise4 = PerlinNoise(octaves=randint(1,10))
 
     xpix, ypix = 100, 100
     pic = []
