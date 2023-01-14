@@ -31,7 +31,9 @@ def circle():
     dot(size)
 
 def generate():
-    for shape in range(60):
+    x=randint(30,60)
+    print(x)
+    for shape in range(x):
         random_color()
         random_pos()
         rectangle()
@@ -39,4 +41,4 @@ def generate():
         random_color()
         circle()
         random_pos()
-        random_color()
+        random_color() 
