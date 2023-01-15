@@ -10,7 +10,7 @@ root.title("Modern Art Generator")
 root.geometry("1920x1080")
 
 
-#Background_Image = functions_constants.make_img(functions_constants.bg_image,(1920,1080))
+Background_Image = functions_constants.make_img(functions_constants.bg_image,(1920,1080))
 Gen_button_image = functions_constants.make_img(functions_constants.generate_art_image,(200,100))
 Instructions_image = functions_constants.make_img(functions_constants.instructions_image,(200,100))
 Exit_image = functions_constants.make_img(functions_constants.exit_image,(200,100))
@@ -22,7 +22,7 @@ Credits_image = functions_constants.make_img(functions_constants.credits_image,(
 root_canvas = Canvas(root)
 root_canvas.pack(fill="both",expand=True)
 
-#root_canvas.create_image(0,0,image=Background_Image,anchor="nw")
+root_canvas.create_image(0,0,image=Background_Image,anchor="nw")
 root_canvas.create_image(450,100,image=Modern_title_image,anchor="nw")
 root_canvas.create_image(1400,750,image=Credits_image,anchor="nw")
 
