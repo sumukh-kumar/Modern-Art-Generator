@@ -15,6 +15,7 @@ noise_image_image = "images/noise_image_image.png"
 generate_art_image = "images/generate_art_image.png"
 confirm_image = "images/Confirm_image.png"
 shapes_image = "images/shapes_image.png"
+instructions_bg = "images/optionsmenu.png"
 
 modern_title = "images/Modern_title.png"
 please_colour_title = "images/please_colour_title.png"
